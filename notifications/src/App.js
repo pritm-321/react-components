@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import AppLayout from "./AppLayout";
+import { useNotification } from "./NotificationContext";
+import Notification from "./notify";
 
 function App() {
+  const { addNotification } = useNotification();
+
+  const handleButtonClick = () => {
+    addNotification('API response received!', 'info');
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Notification />
+      <button onClick={handleButtonClick}>Show Notification</button>
+      {/* Other content */}
     </div>
   );
 }
