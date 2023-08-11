@@ -1,6 +1,5 @@
 import "./App.css";
 
-import AppLayout from "./AppLayout";
 import { useNotification } from "./NotificationContext";
 import Notification from "./notify";
 

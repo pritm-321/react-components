@@ -1,20 +1,25 @@
 /* notify/Notification/Notification.module.css */
 .notification-container {
   position: relative;
-  top: 20px;
-  right: 20px;
 }
-.notification {
+.notification { 
+  position: absolute;
+  color: #000;
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: auto;
+
 }
   
   .notification:not(:last-child) {
     margin-bottom: 8px;
   }
   
-  .notification-container .notification .info {
+ .info {
     background-color: #2196f3;
   }
   
@@ -40,8 +45,8 @@
     cursor: pointer;
   }
   
-  .notification,
+  /* .notification,
   .notification .closeButton {
     color: #fff;
-  }
+  } */
   

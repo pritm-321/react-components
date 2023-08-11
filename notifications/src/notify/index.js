@@ -1,6 +1,7 @@
 // Notification.js
 import React, { useEffect } from 'react';
 import { useNotification } from '../NotificationContext';
+import './Notification.css';
 
 const Notification = () => {
   const { notifications, removeNotification } = useNotification();
@@ -9,7 +10,7 @@ const Notification = () => {
     notifications.forEach((notification) => {
       const timer = setTimeout(() => {
         removeNotification(notification.id);
-      }, 10000);
+      }, 90000);
 
       return () => clearTimeout(timer);
     });
